@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Obich</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h3>time.css</h3>
+            <p id="clock">01:31:55 PM</p>
+            <p class="meta">UTC+2</p>
+        </div>
+
+        <div class="card" id="weather">
+            <h3>weather.json</h3>
+            <p>Clear</p>
+            <p class="meta">-2 C°</p>
+        </div>
+
+        <div class="card about">
+            <h3>about.cs</h3>
+            <div class="profile">
+                <img src="img/1.jpg" alt="avatar">
+                <a class="link" href="https://t.me/obichtg"><h2>@obich</h2></a>
+                <p>C# developer, focusing on C#, Java, and HTML.</p>
+                <div class="skills">
+                    <span>C#</span><span>Java</span><span>HTML</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="projects">
+            <h3>projects.json</h3>
+            <p>View all projects</p>
+            <p class="coming-soon":>Coming soon...</p>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
